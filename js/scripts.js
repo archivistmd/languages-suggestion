@@ -12,16 +12,13 @@ function hideResults() {
       event.preventDefault();
       hideResults();
 
-    const name = parseInt(document.getElementById("name").value);
     const pickProgram = parseInt(document.querySelector("pickProgramA'").value);
     const motivation = parseInt(document.querySelector("motivation").value);
     const comfy = parseInt(document.querySelector("comfy").value);
-    const game = parseInt(document.querySelector("game").value);
-    document.querySelectorAll("span.nameHere").innerText = name;
 
-    const results = pickProgramA + motivation + comfy + game;
+    const results = pickProgramA + motivation + comfy;
 
-    if (pickProgram === "apps" && motivation == "back") {
+    if (pickProgram === "apps" && motivation === "back" && comfy === tumblr) {
       document.querySelector("div.ruby").removeAttribute(".hidden")
     } else if (comfy === "youtube") {
       document.querySelector("div#python").removeAttribute(".hidden")
@@ -29,22 +26,28 @@ function hideResults() {
       document.querySelector("div.ruby").removeAttribute(".hidden")
     };
 
-    if (pickProgram === "games" && motivation == "back") {
+    if (pickProgram === "games" && motivation === "back" && comfy === hacker) {
     document.querySelector("div.python").removeAttribute(".hidden")
     } else if (comfy === "wait") {
     document.querySelector("div#explore").removeAttribute(".hidden")
+    } else {
+      document.querySelector("dive.ruby").removeAttribute(".hidden")
     };
 
-    if (pickProgramA === "web" && motivation == "back") {
+    if (pickProgramA === "web" && motivation === "back" && comfy === tumblr) {
     document.querySelector("div.ruby").removeAttribute(".hidden")
     } else if (comfy === "tumblr") {
     document.querySelector("div#js").removeAttribute(".hidden")
+    } else {
+      document.querySelector("div.explore").removeAttribute(".hidden")
     };
     
-    if (pickProgramA === "dogs" && motivation == "dog") {
+    if (pickProgramA === "dogs" && motivation === "dog" && comfy === hacker) {
     document.querySelector("div.explore").removeAttribute(".hidden")
-    } else if (comfy === "hacker") {
+    } else if (comfy === "tumblr") {
     document.querySelector("div#js").removeAttribute(".hidden")
+    } else {
+      document.querySelector("div.ruby").removeAttribute(".hidden")
     };
     });
 });
