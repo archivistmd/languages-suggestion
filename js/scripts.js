@@ -12,12 +12,14 @@ function hideResults() {
       event.preventDefault();
       hideResults();
 
-    const name = document.getElementById("name").value;
-    const pickProgram = document.querySelector("input[name='pickProgramA']:checked").value;
-    const motivation = document.querySelector("input[name='motivation']:checked").value;
-    const comfy = document.querySelector("input[name='comfy']:checked").value;
-    const game = document.querySelector("input[name='game']:checked").value;
+    const name = parseInt(document.getElementById("name").value);
+    const pickProgram = parseInt(document.querySelector("pickProgramA'").value);
+    const motivation = parseInt(document.querySelector("motivation").value);
+    const comfy = parseInt(document.querySelector("comfy").value);
+    const game = parseInt(document.querySelector("game").value);
     document.querySelectorAll("span.nameHere").innerText = name;
+
+    const results = pickProgramA + motivation + comfy + game;
 
     if (pickProgram === "apps" && motivation == "back") {
       document.querySelector("div.ruby").removeAttribute(".hidden")

@@ -27,6 +27,7 @@ After cloning, the directions are as followed:
 
 Known Bugs
 
+Results aren't appearing when clicking the submit button.
 
 License
 
