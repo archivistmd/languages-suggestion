@@ -13,7 +13,7 @@
     <br>
   </div>
 
-  <form>
+  <form class="baseQs">
     <div class="questionStrt">
       <label for="name"><h3>Hey! How are you? To start off cane we have your <em>name</em>?</h3></label>
       <input id="name" type="text" placeholder="How should we call you?">
@@ -46,11 +46,11 @@
         I code for the puppers.
       </label><br>
       <label>
-        <input type="radio" name="motovation"  value="puzzle">
+        <input type="radio" name="motovation"  value="back">
         I like problem-solving, puzzles, and creating cool things.
       </label><br>
       <label>
-        <input type="radio" name="motovation"  value="work">
+        <input type="radio" name="motovation"  value="front">
         I like knowing how things work but also making them look nice.
       </label><br>
       <label>
@@ -84,10 +84,27 @@
       <option>Overwatch</option>
       <option>Stardew Valley</option>
       <option>Zelda</option><br>
-    </select>
+    </select><br>
+    <h3>Answered every question?</h3>
+    <button type="submit">Click, click!</button>
     </div>
     </form>
-    <button type="submit">Submit!</button>
+
+    <div id="ruby" class="hidden">
+      <p>Looks like Ruby would be an excellent choice for you!</p>
     </div>
+
+    <div id="python" class="hidden">
+      <p>Looks like python would be your jam!</p>
+    </div>
+
+    <div id="js" class="hidden">
+      <p>Looks like JavaScript would be right up your alley!</p>
+    </div>
+
+    <div id="explore" class="hidden">
+      <p>Those are all excellent answers but perhaps think a little more and give us new answers!</p>
+    </div>
+
     </body>
     </html>
