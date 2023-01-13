@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <link rel="stylesheet" href="css/styles.css" type="text/css">
+  <script src="js/scripts.js"></script>
+  <title>Programming Language Survey</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Programming Languages Survey</h1>
+    <p>So you want to start coding. This short survey will help you sort out where you might want to start.</p>
+  </div>
+
+  <form>
+    <div class="questionStrt">
+      <label for="name"><h3>Hey! How are you? To start off cane we have your <em>name</em>?</h3></label>
+      <input id="name" type="text" placeholder="How should we call you?">
+    </div>
+
+    <div class="questionStrt">
+      <h3><strong>First things first</strong>, what are you wanting to program for?</h3>
+      <label>
+        <input type="radio" name="pickProgram"  value="apps" checked>
+        Apps
+      </label><br>
+      <label>
+        <input type="radio" name="pickProgram"  value="games">
+        Games
+      </label><br>
+      <label>
+        <input type="radio" name="pickProgram"  value="web">
+        Websites
+      </label><br>
+      <label>
+        <input type="radio" name="pickProgram"  value="dogs">
+        Dogs.
+      </label>
+    </div>
+
+    <div class="questionStrt">
+      <h3><strong>Why?</strong> What is motivating you to learn programming?</h3>
+      <label>
+        <input type="radio" name="motovation"  value="dog" checked>
+        I code for the puppers.
+      </label><br>
+      <label>
+        <input type="radio" name="motovation"  value="puzzle">
+        I like problem-solving, puzzles, and creating cool things.
+      </label><br>
+      <label>
+        <input type="radio" name="motovation"  value="work">
+        I like knowing how things work but also making them look nice.
+      </label><br>
+      <label>
+        <input type="radio" name="motovation"  value="wait">
+        Wait, is this not like the matrix?
+      </label>
+    </div>
+
+    <div class="questionStrt">
+      <h3>How familiar are you with programming?</h3>
+      <label>
+        <input type="radio" name="comfy"  value="hacker" checked>
+        I see a lot of code in hacker shows.
+      </label><br>
+      <label>
+        <input type="radio" name="comfy"  value="tumblr">
+        I've messed around with it on tumblr.
+      </label><br>
+      <label>
+        <input type="radio" name="comfy"  value="youtube">
+        Youtube has been a nice intro.
+      </label>
+    </div>
+
+    <div class="questionStrt">
+      <h3>Pick a game.</h3>
+      <select type="select-form" id="game">
+      <option>---</option>
+      <option>Cult of the Lamb</option>
+      <option>Dragon Age</option>
+      <option>Overwatch</option>
+      <option>Stardew Valley</option>
+      <option>Zelda</option><br>
+    </select>
+    </div>
+    </form>
+
+    
+    <button type="submit">Submit!</button>
+    </div>
+    </body>
+    </html>
