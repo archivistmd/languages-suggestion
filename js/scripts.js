@@ -1,11 +1,23 @@
-function languageSuggestion(event) {
-  event.preventDefault();
+function hideResults() {
+  document.getElementById("ruby").setAttribute("class", "hidden")
+  document.getElementById("python").setAttribute("class", "hidden")
+  document.getElementById("js").setAttribute("class", "hidden")
+  document.getElementById("explore").setAttribute("class", "hidden")
 }
 
-    const pickProgram = document.querySelector("input[name='pickProgramA']:checked")
-    const motivation = document.querySelector("input[name='motivation']:checked")
-    const comfy = document.querySelector("input[name='comfy']:checked")
-    const game = document.querySelector("input[name='game']:checked")
+
+  window.addEventListener("load", function(){
+    const form = this.document.getElementByID("form");
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      hideResults();
+
+    const name = document.getElementById("name").value;
+    const pickProgram = document.querySelector("input[name='pickProgramA']:checked").value;
+    const motivation = document.querySelector("input[name='motivation']:checked").value;
+    const comfy = document.querySelector("input[name='comfy']:checked").value;
+    const game = document.querySelector("input[name='game']:checked").value;
+    document.querySelectorAll("span.nameHere").innerText = name;
 
     if (pickProgram === "apps" && motivation == "back") {
       document.querySelector("div.ruby").removeAttribute(".hidden")
@@ -32,8 +44,5 @@ function languageSuggestion(event) {
     } else if (comfy === "hacker") {
     document.querySelector("div#js").removeAttribute(".hidden")
     };
-  
-  window.addEventListener("load", function(){
-    const form = this.document.getElementByID("form");
-    form.addEventListener("submit", languageSuggestion)
-  })
+    });
+});
