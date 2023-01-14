@@ -36,6 +36,8 @@ function hideResults() {
       document.querySelector("ruby").removeAttribute(".hidden")
     } else if (pickProgram === "game" && motivation === "back" && comfy === "youtube") {
       document.querySelector("js").removeAttribute(".hidden")
+    } else if (pickProgram === "game" && motivation === "dog" && comfy === "hacker") {
+      document.querySelector("explore").removeAttribute(".hidden")
     };
 
     if (pickProgramA === "web" && motivation === "back" && comfy === youtube) {
@@ -46,6 +48,8 @@ function hideResults() {
       document.querySelector("explore").removeAttribute(".hidden")
     } else if (pickProgramA === "web" && motivation === "dog" && comfy === "tumblr") {
       document.querySelector("js").removeAttribute(".hidden")
+    } else if (pickProgramA === "web" && motivation === "dog" && comfy === "hacker") {
+      document.querySelector("explore").removeAttribute(".hidden")
     };
     
     if (pickProgramA === "dogs" && motivation === "dog" && comfy === hacker) {
@@ -56,6 +60,8 @@ function hideResults() {
       document.querySelector("ruby").removeAttribute(".hidden")
     } else if (pickProgramA === "dogs" && motivation === "back" && comfy === "youtube") {
       document.querySelector("python").removeAttribute(".hidden")
+    } else if (pickProgramA === "dogs" && motivation === "dog" && comfy === "wait") {
+      document.querySelector("explore").removeAttribute(".hidden")
     };
     });
 });
