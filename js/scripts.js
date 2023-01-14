@@ -19,35 +19,43 @@ function hideResults() {
     const results = pickProgramA + motivation + comfy;
 
     if (pickProgram === "apps" && motivation === "back" && comfy === tumblr) {
-      document.querySelector("div.ruby").removeAttribute(".hidden")
-    } else if (comfy === "youtube") {
-      document.querySelector("div#python").removeAttribute(".hidden")
-    } else {
-      document.querySelector("div.ruby").removeAttribute(".hidden")
+      document.querySelector("js").removeAttribute(".hidden")
+    } else if (pickProgram === "apps" && motivation === "back" && comfy === "hacker") {
+      document.querySelector("python").removeAttribute(".hidden")
+    } else if (pickProgram === "apps" && motivation === "front" && comfy === "youtube") {
+      document.querySelector("ruby").removeAttribute(".hidden")
+    } else if (pickProgram === "apps" && motivation === "wait" && comfy === "hacker"){
+      document.querySelector("explore").removeAttribute(".hidden")
     };
 
     if (pickProgram === "games" && motivation === "back" && comfy === hacker) {
-    document.querySelector("div.python").removeAttribute(".hidden")
-    } else if (comfy === "wait") {
-    document.querySelector("div#explore").removeAttribute(".hidden")
-    } else {
-      document.querySelector("dive.ruby").removeAttribute(".hidden")
+      document.querySelector("python").removeAttribute(".hidden")
+    } else if (pickProgram === "game" && motivation === "dog" && comfy === "youtube") {
+      document.querySelector("explore").removeAttribute(".hidden")
+    } else if (pickProgram === "game" && motivation === "front" && comfy === "youtube") {
+      document.querySelector("ruby").removeAttribute(".hidden")
+    } else if (pickProgram === "game" && motivation === "back" && comfy === "youtube") {
+      document.querySelector("js").removeAttribute(".hidden")
     };
 
-    if (pickProgramA === "web" && motivation === "back" && comfy === tumblr) {
-    document.querySelector("div.ruby").removeAttribute(".hidden")
-    } else if (comfy === "tumblr") {
-    document.querySelector("div#js").removeAttribute(".hidden")
-    } else {
-      document.querySelector("div.explore").removeAttribute(".hidden")
+    if (pickProgramA === "web" && motivation === "back" && comfy === youtube) {
+      document.querySelector("ruby").removeAttribute(".hidden")
+    } else if (pickProgramA === "web" && motivation === "front" && comfy === "youtube") {
+      document.querySelector("js").removeAttribute(".hidden")
+    } else if (pickProgramA === "web" && motivation === "wait" && comfy === "hacker") {
+      document.querySelector("explore").removeAttribute(".hidden")
+    } else if (pickProgramA === "web" && motivation === "dog" && comfy === "tumblr") {
+      document.querySelector("js").removeAttribute(".hidden")
     };
     
     if (pickProgramA === "dogs" && motivation === "dog" && comfy === hacker) {
-    document.querySelector("div.explore").removeAttribute(".hidden")
-    } else if (comfy === "tumblr") {
-    document.querySelector("div#js").removeAttribute(".hidden")
-    } else {
-      document.querySelector("div.ruby").removeAttribute(".hidden")
+      document.querySelector("explore").removeAttribute(".hidden")
+    } else if (pickProgramA === "dogs" && motivation === "front" && comfy === "tumblr") {
+      document.querySelector("js").removeAttribute(".hidden")
+    } else if (pickProgramA === "dogs" && motivation === "front" && comfy === "youtube") {
+      document.querySelector("ruby").removeAttribute(".hidden")
+    } else if (pickProgramA === "dogs" && motivation === "back" && comfy === "youtube") {
+      document.querySelector("python").removeAttribute(".hidden")
     };
     });
 });
