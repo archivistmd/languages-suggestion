@@ -12,23 +12,23 @@ function hideResults() {
       event.preventDefault();
       hideResults();
 
-    const pickProgram = parseInt(document.querySelector("pickProgram'").value);
-    const motivation = parseInt(document.querySelector("motivation").value);
-    const comfy = parseInt(document.querySelector("comfy").value);
+    const pickProgram = document.querySelector("pickProgram").value;
+    const motivation = document.querySelector("motivation").value;
+    const comfy = document.querySelector("comfy").value;
 
     const results = pickProgram + motivation + comfy;
 
-    if (pickProgram === "apps" && motivation === "back" && comfy === tumblr) {
+    if (pickProgram === "apps" && motivation === "back" && comfy === "tumblr") {
       document.querySelector("js").removeAttribute(".hidden")
-    } else if (pickProgram === "apps" && motivation === "back" && comfy === "hacker") {
+    } else if (pickProgram === "apps" && motivation === "back" && comfy === ".hacker") {
       document.querySelector("python").removeAttribute(".hidden")
-    } else if (pickProgram === "apps" && motivation === "front" && comfy === "youtube") {
+    } else if (pickProgram === "apps" && motivation === "front" && comfy === ".youtube") {
       document.querySelector("ruby").removeAttribute(".hidden")
-    } else if (pickProgram === "apps" && motivation === "wait" && comfy === "hacker"){
+    } else if (pickProgram === "apps" && motivation === "wait" && comfy === ".hacker"){
       document.querySelector("explore").removeAttribute(".hidden")
     };
 
-    if (pickProgram === "games" && motivation === "back" && comfy === hacker) {
+    if (pickProgram === "games" && motivation === "back" && comfy === "hacker") {
       document.querySelector("python").removeAttribute(".hidden")
     } else if (pickProgram === "game" && motivation === "dog" && comfy === "youtube") {
       document.querySelector("explore").removeAttribute(".hidden")
@@ -40,7 +40,7 @@ function hideResults() {
       document.querySelector("explore").removeAttribute(".hidden")
     };
 
-    if (pickProgram === "web" && motivation === "back" && comfy === youtube) {
+    if (pickProgram === "web" && motivation === "back" && comfy === "youtube") {
       document.querySelector("ruby").removeAttribute(".hidden")
     } else if (pickProgram === "web" && motivation === "front" && comfy === "youtube") {
       document.querySelector("js").removeAttribute(".hidden")
@@ -52,7 +52,7 @@ function hideResults() {
       document.querySelector("explore").removeAttribute(".hidden")
     };
     
-    if (pickProgram === "dogs" && motivation === "dog" && comfy === hacker) {
+    if (pickProgram === "dogs" && motivation === "dog" && comfy === "hacker") {
       document.querySelector("explore").removeAttribute(".hidden")
     } else if (pickProgram === "dogs" && motivation === "front" && comfy === "tumblr") {
       document.querySelector("js").removeAttribute(".hidden")
