@@ -12,9 +12,9 @@ function hideResults() {
       event.preventDefault();
       hideResults();
 
-    const pickProgram = document.querySelector("input[name='comfy']:checked");
-    const motivation = document.querySelector("input[name='motivation']:checked");
-    const comfy = document.querySelector("input[name='comfy']:checked");
+    const pickProgram = document.querySelector("input[name='comfy']:checked").value;
+    const motivation = document.querySelector("input[name='motivation']:checked").value;
+    const comfy = document.querySelector("input[name='comfy']:checked").value;
 
     const results = pickProgram + motivation + comfy;
 
