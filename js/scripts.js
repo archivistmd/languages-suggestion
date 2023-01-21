@@ -48,9 +48,10 @@ function hideResults() {
       document.querySelector("js").removeAttribute(".hidden");
     } else if (pickProgram === "dogs" && motivation === "front" && comfy === "youtube") {
       document.querySelector("ruby").removeAttribute(".hidden");
-    } else if (9pickProgram === "dogs" || pickProgram === "games") && motivation === "back" && comfy === "hacker") {
+    } else if ((pickProgram === "dogs" || pickProgram === "games") && motivation === "back" && comfy === "hacker") {
       document.querySelector("python").removeAttribute(".hidden");
     } else if ((pickProgram === "dogs" || pickProgram === "apps") && motivation === "dog" && comfy === "wait") {
       document.querySelector("explore").removeAttribute(".hidden")
     };
+  })
 });
