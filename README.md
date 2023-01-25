@@ -14,7 +14,7 @@ Description
 
 Serving as my language survey landing page, this simple website includes a few questions to help one discover the coding language they'd be most interested in.
 
-The portfolio can be viewed at the coresponding (GitHub Pages)[https://archivistmd.github.io/languages/].
+The portfolio can be viewed at the coresponding (GitHub Pages)[https://archivistmd.github.io/languages-suggestion/].
 
 Or you may clone the project to your desktop by using the following command:
 
