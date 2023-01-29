@@ -5,53 +5,34 @@ function hideResults() {
   document.getElementById("explore").setAttribute("class", "hidden");
 }
 
+    function getResults (event) {
+    event.preventDefault();
+    hideResults();
+      
+    const pickProgram = document.querySelector("input[name='pickProgram']:checked").value;
+    const motivation = document.querySelector("input[name='motivation']:checked").value;
+    const comfy = document.querySelector("input[name='comfy']:checked").value;
 
-  window.addEventListener("load", function(){
-    const form = this.document.getElementById("form");
-    form.addEventListener("submit", (event) => {
-      event.preventDefault();
-      hideResults();
-
-    const pickProgram = document.getElementById("input[name='pickProgram']:checked").value;
-    const motivation = document.getElementById("input[name='motivation']:checked").value;
-    const comfy = document.getElementById("input[name='comfy']:checked").value;
+    console.log("you've made it to the getResults function!");
 
     const results = pickProgram + motivation + comfy;
 
-    if ((pickProgram === "apps" || pickProgram === "web") && motivation === "front" && comfy === "tumblr") {
-      document.getElementById("js").removeAttribute("hidden");
-    } else if ((pickProgram ==="apps" || pickProgram === "web") && motivation === "front" && comfy === "youtube") {
-      document.getElementById("ruby").removeAttribute("hidden");
-    } else if ((pickProgram === "apps" || pickProgram === "games") && motivation === "back" && comfy === "hacker") {
-      document.getElementById("python").removeAttribute("hidden")
-    } else if ((pickProgram === "apps" || pickProgram === "web") && motivation === "wait" && comfy === "hacker"){
-      document.getElementById("explore").removeAttribute("hidden");
-    } else if ((pickProgram === "game" || pickProgram === "web") && motivation === "dog" && comfy === "youtube") {
-      document.getElementById("explore").removeAttribute("hidden");
-    } else if ((pickProgram === "game" || pickProgram === "web") && motivation === "front" && comfy === "youtube") {
-      document.getElementById("ruby").removeAttribute("hidden");
-    } else if ((pickProgram === "game" || pickProgram === "web") && motivation === "dog" && comfy === "hacker") {
-      document.getElementById("explore").removeAttribute("hidden");
-    } else if (pickProgram === "web" && motivation === "back" && comfy === "youtube") {
-      document.getElementById("ruby").removeAttribute("hidden");
-    } else if (pickProgram === "web" && motivation === "front" && comfy === "youtube") {
-      document.getElementById("js").removeAttribute("hidden");
-    } else if (pickProgram === "web" && motivation === "wait" && comfy === "hacker") {
-      document.getElementById("explore").removeAttribute("hidden");
-    } else if (pickProgram === "web" && motivation === "dog" && comfy === "tumblr") {
-      document.getElementById("js").removeAttribute("hidden");
-    } else if (pickProgram === "web" && motivation === "dog" && comfy === "hacker") {
-      document.getElementById("explore").removeAttribute("hidden");    
-    } else if (pickProgram === "dogs" && motivation === "dog" && comfy === "hacker") {
-      document.getElementById("explore").removeAttribute("hidden");
-    } else if (pickProgram === "dogs" && motivation === "front" && comfy === "tumblr") {
-      document.getElementById("js").removeAttribute("hidden");
-    } else if (pickProgram === "dogs" && motivation === "front" && comfy === "youtube") {
-      document.getElementById("ruby").removeAttribute("hidden");
-    } else if ((pickProgram === "dogs" || pickProgram === "games") && motivation === "back" && comfy === "hacker") {
-      document.getElementById("python").removeAttribute("hidden");
-    } else if ((pickProgram === "dogs" || pickProgram === "apps") && motivation === "dog" && comfy === "wait") {
-      document.getElementById("explore").removeAttribute("hidden")
+    if ((pickProgram === "apps" || pickProgram === "web") && motivation !== "back" && comfy !== "hacker"){
+      document.getElementById("js").removeAttribute("class");
+    } else if ((pickProgram === "apps" || pickProgram === "games") && motivation !== "front" && comfy === "hacker") {
+      document.getElementById("python").removeAttribute("class")
+    } else if (pickProgram === "games" && motivation === "dog" && comfy !== "hacker") {
+      document.getElementById("explore").removeAttribute("class");
+    } else if (pickProgram !== "games" && motivation !== "back" && comfy !== "hacker") {
+      document.getElementById("ruby").removeAttribute("class");
+    } else if ((pickProgram === "app" || pickProgram === "games") && motivation !== "dog" && comfy === "hacker") {
+      document.getElementById("explore").removeAttribute("class");
+    } else if ((pickProgram === "dog" || pickProgram === "web") && motivation === "dog" && comfy !== "youtube") {
+      document.getElementById("explore").removeAttribute("class");
     };
-  })
-});
+  }
+
+    window.addEventListener("load", function() {
+    const form = document.querySelector("form");
+    form.addEventListener("submit", getResults);
+    });
